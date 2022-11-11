@@ -17,13 +17,13 @@
 
 clear all
 
-if isdir('../data')
+if isfolder('../data')
     % ALL experimental data, all 100 subjects live in 'data'
     load('../data/filenames.mat')
     load('../data/fullsubjnumbers.mat')
     data_directory = '../data/';
     % grab all subjects from those files, then
-elseif isdir('../example_data')
+elseif isfolder('../example_data')
     files{1} = 'example_subjs.mat';
     load('../example_data/fullsubjnumbers.mat')
     data_directory = '../example_data/';
@@ -35,7 +35,7 @@ end
 % (subject numbers are in "list", which are randomly generated at the beginning of
 % the MTurk task & about 7 digits long)
 
-preloadflag = false;
+preloadflag = true;
 % do you want to run all these analyses? they take some time
 
 if preloadflag

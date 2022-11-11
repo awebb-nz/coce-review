@@ -73,10 +73,10 @@ for col = 1:size(measures,2)
     fig = gcf; fig.Color = 'w';
     
     subplot(2,2,4)
-    for misses = 0:4
-        scatter(ones(nsubjs,1)*misses,nanmean(misseffect(misses+1,:,:),2),'Filled')
-        hold on
-    end
+    %for misses = 0:4
+    %    scatter(ones(nsubjs,1)*misses,nanmean(misseffect(misses+1,:,:),2),'Filled')
+    %    hold on
+    %end
     for subj = 1:nsubjs
         plot(0:4,nanmean(misseffect(:,:,subj),2),'k--')
         hold on
